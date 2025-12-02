@@ -17,6 +17,13 @@ int main()
 {
     int a, b;
     cin >> a >> b;
-    cout << a << " " << b << " NWD: " << nwd(a, b) << endl;
-    return 0;
+
+    if(a <= 0 || b <= 0)
+	{
+        cout << "Liczby musza byc dodatnie!" << endl;
+        return 1;
+    }
+
+   cout << a << " " << b << " NWD: " << nwd(a, b) << endl;
+   return 0;
 }
