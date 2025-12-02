@@ -2,10 +2,21 @@
 
 using namespace std;
 
+int nwd(int a, int b)
+{
+    while (b != 0)
+	{
+        int t = b;
+        b = a % b;
+        a = t;
+    }
+    return a;
+}
+
 int main()
 {
-	int a, b;
-	cin >> a >> b;
-	cout << a << " " << b << endl;
-	return 0;
+    int a, b;
+    cin >> a >> b;
+    cout << a << " " << b << " NWD: " << nwd(a, b) << endl;
+    return 0;
 }
